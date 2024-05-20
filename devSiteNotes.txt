@@ -1,0 +1,7 @@
+hosting off: Netlify.com
+
+domain owned: tylernicholas.dev
+    bought from namecheap.com
+        https://ap.www.namecheap.com/dashboard
+
+we have an aws account: TNicholas512
