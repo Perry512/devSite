@@ -4,3 +4,4 @@ to = "/index.html"
 
 [build]
 publish = "public/"
+command = "npm run build"
