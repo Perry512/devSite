@@ -1,0 +1,22 @@
+{
+  "name": "devsite",
+  "version": "1.0.0",
+  "description": "my first dev website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Perry512/devSite.git"
+  },
+  "keywords": [
+    "dev"
+  ],
+  "author": "Tyler Nicholas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Perry512/devSite/issues"
+  },
+  "homepage": "https://github.com/Perry512/devSite#readme"
+}
