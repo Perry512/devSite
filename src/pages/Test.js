@@ -1,7 +1,7 @@
 import React from "react";
 
 function Test() {
-    const navbar = 'navbar';
+    //const navbar = 'navbar';
 
     return (
         <nav className='topBar'>
