@@ -5,6 +5,14 @@ import { useDrag } from 'react-use-gesture';
 
 import styles from '../styles/styles.module.css';
 
+const TestCard = () => {
+  return (
+    <div className="card-content">
+      <h2 className="GoldlewisCards">Goldlewis j.D </h2>
+      <p>Neutral Game</p>
+    </div>
+  );
+}
 const cards = [
     'https://wiki.supercombo.gg/images/b/bd/SF6_Dee_Jay_66.png',
     'https://www.dustloop.com/wiki/images/9/91/GGST_Goldlewis_Dickinson_236D.png',
@@ -14,14 +22,14 @@ const cards = [
 const cardsHTML = [
   `<div class="card-content"><h2>Title 1</h2><p>This is some text for card 1.</p></div>`,
   `<div class="card-content"><h2>Title 1</h2><p>This is some text for card 1.</p></div>`,
-  '<div class="card-content"><h2 class="GoldlewisCard">Goldlewis j.D</h2><p>This is true neutral</p></div>',
+  <TestCard />,
 ]
 
 const to = (i: number) => ({
     x: 0,
     y: i * -4,
     scale: 1,
-    rot: -10 + Math.random() * 30,
+    rot: -10 + Math.random() * 20,
     delay: i * 100,
 
 })
@@ -31,7 +39,7 @@ console.log(cards);
 const from = (_i: number) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r: number, s: number) =>
-  `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
+  `perspective(1250px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
 
 function Deck() {
@@ -77,8 +85,9 @@ function Deck() {
               transform: interpolate([rot, scale], trans),
               backgroundImage: `url(${cards[i]})`,
             }}
-            dangerouslySetInnerHTML={{__html: cardsHTML[i] }}
-          />
+          >
+            {cardsHTML[i]}
+          </animated.div>
         </animated.div>
       ))}
     </>
