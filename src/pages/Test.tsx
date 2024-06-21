@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-
 import { useSprings, animated, to as interpolate } from '@react-spring/web';
 import { useDrag } from 'react-use-gesture';  
 
 import styles from '../styles/styles.module.css';
+
+import IntroCard from "../pages/IntroCard.tsx"
 
 const TestCard = () => {
   return (
@@ -14,22 +15,22 @@ const TestCard = () => {
   );
 }
 const cards = [
-    'https://wiki.supercombo.gg/images/b/bd/SF6_Dee_Jay_66.png',
+    'https://www.dustloop.com/wiki/images/7/71/GGST_Goldlewis_Dickinson_jD.png',
     'https://www.dustloop.com/wiki/images/9/91/GGST_Goldlewis_Dickinson_236D.png',
-    'https://www.dustloop.com/wiki/images/7/71/GGST_Goldlewis_Dickinson_jD.png'
+    'https://wiki.supercombo.gg/images/b/bd/SF6_Dee_Jay_66.png',
 ]
 
 const cardsHTML = [
-  `<div class="card-content"><h2>Title 1</h2><p>This is some text for card 1.</p></div>`,
-  `<div class="card-content"><h2>Title 1</h2><p>This is some text for card 1.</p></div>`,
   <TestCard />,
+  `<div class="card-content"><h2>Title 1</h2><p>This is some text for card 1.</p></div>`,
+  <IntroCard />,
 ]
 
 const to = (i: number) => ({
     x: 0,
     y: i * -4,
     scale: 1,
-    rot: -10 + Math.random() * 20,
+    rot: -10 + (i * -0.2) * 20,
     delay: i * 100,
 
 })
@@ -50,7 +51,7 @@ function Deck() {
   })) // Create a bunch of springs using the helpers above
 
   useEffect(() => {
-    const originalOverflow = document.body.style.overflowx;
+    const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
     return () => {

@@ -23,7 +23,6 @@ function App() {
     <div style={{height: '100vh' }}>
       <Test />
       <MainPage />
-
     </div>
     
   );
