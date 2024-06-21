@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useSprings, animated, to as interpolate } from '@react-spring/web';
 import { useDrag } from 'react-use-gesture';  
@@ -48,6 +48,17 @@ function Deck() {
     ...to(i),
     from: from(i),
   })) // Create a bunch of springs using the helpers above
+
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflowx;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+
+  }, []);
+
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   const bind = useDrag(({ args: [index], down, movement: [mx], direction: [xDir], velocity }) => {
     const trigger = velocity > 0.2 ; // If you flick hard enough it should trigger the card to fly out
@@ -83,7 +94,8 @@ function Deck() {
             {...bind(i)}
             style={{
               transform: interpolate([rot, scale], trans),
-              backgroundImage: `url(${cards[i]})`,
+              backgroundImage:`url(${cards[i]})`,
+              backgroundColor: "#FF0000",
             }}
           >
             {cardsHTML[i]}
