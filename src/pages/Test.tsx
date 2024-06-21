@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 
 import { useSprings, animated, to as interpolate } from '@react-spring/web';
-import { useDrag } from 'react-use-gesture';
+import { useDrag } from 'react-use-gesture';  
+
+import styles from '../styles/styles.module.css';
 
 const cards = [
-    '1',
-    '2',
-    '3'
+    'https://wiki.supercombo.gg/images/b/bd/SF6_Dee_Jay_66.png',
+    'https://www.dustloop.com/wiki/images/9/91/GGST_Goldlewis_Dickinson_236D.png',
+    'https://www.dustloop.com/wiki/images/7/71/GGST_Goldlewis_Dickinson_jD.png'
 ]
 
 const to = (i: number) => ({
     x: 0,
     y: i * -4,
     scale: 1,
-    rot: -10 + Math.random() * 20,
+    rot: -10 + Math.random() * 30,
     delay: i * 100,
 
 })
@@ -23,6 +25,7 @@ const from = (_i: number) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 const trans = (r: number, s: number) =>
   `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
+
 function Deck() {
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
   const [props, api] = useSprings(cards.length, i => ({
@@ -31,7 +34,7 @@ function Deck() {
   })) // Create a bunch of springs using the helpers above
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   const bind = useDrag(({ args: [index], down, movement: [mx], direction: [xDir], velocity }) => {
-    const trigger = velocity > 0.2 // If you flick hard enough it should trigger the card to fly out
+    const trigger = velocity > 0.2 ; // If you flick hard enough it should trigger the card to fly out
     const dir = xDir < 0 ? -1 : 1 // Direction should either point left or right
     if (!down && trigger) gone.add(index) // If button/finger's up and trigger velocity is reached, we flag the card ready to fly out
     api.start(i => {
