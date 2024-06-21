@@ -11,6 +11,12 @@ const cards = [
     'https://www.dustloop.com/wiki/images/7/71/GGST_Goldlewis_Dickinson_jD.png'
 ]
 
+const cardsHTML = [
+  `<div class="card-content"><h2>Title 1</h2><p>This is some text for card 1.</p></div>`,
+  `<div class="card-content"><h2>Title 1</h2><p>This is some text for card 1.</p></div>`,
+  '<div class="card-content"><h2 class="GoldlewisCard">Goldlewis j.D</h2><p>This is true neutral</p></div>',
+]
+
 const to = (i: number) => ({
     x: 0,
     y: i * -4,
@@ -19,6 +25,8 @@ const to = (i: number) => ({
     delay: i * 100,
 
 })
+
+console.log(cards);
 
 const from = (_i: number) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
@@ -69,6 +77,7 @@ function Deck() {
               transform: interpolate([rot, scale], trans),
               backgroundImage: `url(${cards[i]})`,
             }}
+            dangerouslySetInnerHTML={{__html: cardsHTML[i] }}
           />
         </animated.div>
       ))}
