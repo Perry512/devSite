@@ -5,6 +5,7 @@ import { useDrag } from 'react-use-gesture';
 import styles from '../styles/styles.module.css';
 
 import IntroCard from "../pages/IntroCard.tsx"
+import WhatIsSite from "./WhatIsSite.tsx";
 
 const TestCard = () => {
   return (
@@ -14,15 +15,15 @@ const TestCard = () => {
     </div>
   );
 }
-const cards = [
-    'https://www.dustloop.com/wiki/images/7/71/GGST_Goldlewis_Dickinson_jD.png',
-    'https://www.dustloop.com/wiki/images/9/91/GGST_Goldlewis_Dickinson_236D.png',
-    'https://wiki.supercombo.gg/images/b/bd/SF6_Dee_Jay_66.png',
-]
+// const cards = [
+//     'https://www.dustloop.com/wiki/images/7/71/GGST_Goldlewis_Dickinson_jD.png',
+//     'https://www.dustloop.com/wiki/images/9/91/GGST_Goldlewis_Dickinson_236D.png',
+//     'https://wiki.supercombo.gg/images/b/bd/SF6_Dee_Jay_66.png',
+// ]
 
 const cardsHTML = [
   <TestCard />,
-  `<div class="card-content"><h2>Title 1</h2><p>This is some text for card 1.</p></div>`,
+  <WhatIsSite />,
   <IntroCard />,
 ]
 
@@ -30,12 +31,12 @@ const to = (i: number) => ({
     x: 0,
     y: i * -4,
     scale: 1,
-    rot: -10 + (i * -0.2) * 20,
+    rot: 9 + (i * -0.2) * 20,
     delay: i * 100,
 
 })
 
-console.log(cards);
+console.log(cardsHTML);
 
 const from = (_i: number) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
@@ -45,7 +46,7 @@ const trans = (r: number, s: number) =>
 
 function Deck() {
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
-  const [props, api] = useSprings(cards.length, i => ({
+  const [props, api] = useSprings(cardsHTML.length, i => ({
     ...to(i),
     from: from(i),
   })) // Create a bunch of springs using the helpers above
@@ -79,7 +80,7 @@ function Deck() {
         config: { friction: 50, tension: down ? 800 : isGone ? 200 : 500 },
       }
     })
-    if (!down && gone.size === cards.length)
+    if (!down && gone.size === cardsHTML.length)
       setTimeout(() => {
         gone.clear()
         api.start(i => to(i))
@@ -95,8 +96,8 @@ function Deck() {
             {...bind(i)}
             style={{
               transform: interpolate([rot, scale], trans),
-              backgroundImage:`url(${cards[i]})`,
-              backgroundColor: "#FF0000",
+              background: "linear-gradient(0.55turn, #3f87a6, #ebf8e1, #f69d3c)",
+              //backgroundImage:`url(${cards[i]})`,
             }}
           >
             {cardsHTML[i]}
