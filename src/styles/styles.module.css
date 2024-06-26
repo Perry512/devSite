@@ -67,16 +67,30 @@ html, body {
 
   }
 
-  .middlecontainer {
+  .middleouterbox {
 
-    scroll-snap-align: start;
-    position: bottom;
-    bottom: 0;
-    left: 0;
+    position: center;
     height: 100vh;
     width: 100%;
-    background-color: #f4f5f4;
     display: flex;
+    background-color: #9D9CAB;
     align-items: center;
     justify-content: center;
+    
+  }
+  
+  .middlecontainer {
+    
+    height: 95%;
+    width:95%;
+    border-radius: 3%;
+    background-color: #f4f5f4;
+    box-shadow:rgba(50, 50, 73, 0.3);
+
+  }
+
+  .middlecontainer > section {
+
+    padding: 5%;
+    
   }

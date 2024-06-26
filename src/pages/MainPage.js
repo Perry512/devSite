@@ -4,7 +4,7 @@ import styles from '../styles/styles.module.css';
 const MainPageContent = () => {
 
     return (
-        <div>
+        <div  className={styles.middlecontainer}>
             {/* <body> This is the beginning of my resume site! </body> */}
             <section>
                 <h1> Who am I?</h1>
@@ -18,7 +18,7 @@ const MainPageContent = () => {
 export default function MainPage() {
 
     return (
-        <div className={styles.middlecontainer}>
+        <div className={styles.middleouterbox}>
             <MainPageContent />
         </div>
     )
