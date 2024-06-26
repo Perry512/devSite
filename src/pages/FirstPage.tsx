@@ -4,17 +4,10 @@ import { useDrag } from 'react-use-gesture';
 
 import styles from '../styles/styles.module.css';
 
-import IntroCard from "../pages/IntroCard.tsx"
-import WhatIsSite from "./WhatIsSite.tsx";
+import IntroCard from "./cards/IntroCard.tsx"
+import WhatIsSite from "./cards/WhatIsSite.tsx";
+import TestCard from "./cards/TestCard.tsx";
 
-const TestCard = () => {
-  return (
-    <div className="card-content">
-      <h2 className="GoldlewisCards">Goldlewis j.D </h2>
-      <p>Neutral Game</p>
-    </div>
-  );
-}
 // const cards = [
 //     'https://www.dustloop.com/wiki/images/7/71/GGST_Goldlewis_Dickinson_jD.png',
 //     'https://www.dustloop.com/wiki/images/9/91/GGST_Goldlewis_Dickinson_236D.png',
@@ -41,7 +34,7 @@ console.log(cardsHTML);
 const from = (_i: number) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r: number, s: number) =>
-  `perspective(1250px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
+  `perspective(1750px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
 
 function Deck() {
@@ -96,7 +89,7 @@ function Deck() {
             {...bind(i)}
             style={{
               transform: interpolate([rot, scale], trans),
-              background: "linear-gradient(0.55turn, #3f87a6, #ebf8e1, #f69d3c)",
+              background: "#F4F5F4",
               //backgroundImage:`url(${cards[i]})`,
             }}
           >

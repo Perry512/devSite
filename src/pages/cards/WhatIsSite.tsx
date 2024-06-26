@@ -1,11 +1,11 @@
 import React from "react";
 
-import styles from "../styles/styles.module.css";
+import styles from "../../styles/styles.module.css";
 
 const CardContent = () => {
 
     return(
-        <div className="card-content">
+        <div className={styles.cardcontent}>
             <h2> What is this website for? </h2>
             <p> While it probably looks goofy right now, it is in general meant to show off my ability in developing web technologies, like a free form portfolio </p>
         </div>

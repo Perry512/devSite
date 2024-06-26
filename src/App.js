@@ -1,8 +1,8 @@
-import {Routes, Route, BrowserRouter} from "react-router-dom";
+//import {Routes, Route, BrowserRouter} from "react-router-dom";
 
 import './App.css';
 import MainPage from "./pages/MainPage.js";
-import Test from "./pages/Test.tsx";
+import FirstPage from "./pages/FirstPage.tsx";
 
 // function App() {
 //   return (
@@ -21,7 +21,7 @@ import Test from "./pages/Test.tsx";
 function App() {
   return (
     <div style={{height: '100vh' }}>
-      <Test />
+      <FirstPage />
       <MainPage />
     </div>
     
