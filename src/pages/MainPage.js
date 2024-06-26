@@ -1,20 +1,25 @@
-import React from "react";
+import React from 'react';
+import styles from '../styles/styles.module.css';
 
-const MainPage = () => {
+const MainPageContent = () => {
 
     return (
-        <React.Fragment>
-            <head>
-                Hello World!
-            </head>
-            <body> This is the beginning of my resume site! </body>
+        <div>
+            {/* <body> This is the beginning of my resume site! </body> */}
             <section>
                 <h1> Who am I?</h1>
                 <p> I am a computer science graduate who is delving down into the world of web development </p>
             </section>
-        </React.Fragment>
+        </div>
     );
 
 }
 
-export default MainPage;
+export default function MainPage() {
+
+    return (
+        <div className={styles.middlecontainer}>
+            <MainPageContent />
+        </div>
+    )
+}

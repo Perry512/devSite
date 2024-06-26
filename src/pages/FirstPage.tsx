@@ -7,6 +7,7 @@ import styles from '../styles/styles.module.css';
 import IntroCard from "./cards/IntroCard.tsx"
 import WhatIsSite from "./cards/WhatIsSite.tsx";
 import TestCard from "./cards/TestCard.tsx";
+import WelcomeCard from "./cards/WelcomeCard.tsx";
 
 // const cards = [
 //     'https://www.dustloop.com/wiki/images/7/71/GGST_Goldlewis_Dickinson_jD.png',
@@ -18,6 +19,7 @@ const cardsHTML = [
   <TestCard />,
   <WhatIsSite />,
   <IntroCard />,
+  <WelcomeCard />,
 ]
 
 const to = (i: number) => ({
