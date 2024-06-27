@@ -7,9 +7,15 @@ const MainPageContent = () => {
         <div  className={styles.middlecontainer}>
             {/* <body> This is the beginning of my resume site! </body> */}
             <section>
+                <div>
                 <h1> Who am I?</h1>
                 <p> I am a computer science graduate who is delving down into the world of web development </p>
+                </div>
+                <div> 
+                    <h1> Hello! </h1>
+                </div>
             </section>
+            <section> Section 2 </section>
         </div>
     );
 
