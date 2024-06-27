@@ -47,11 +47,10 @@ html, body {
     /* from: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
     text-align: center;
 
   }
@@ -100,20 +99,24 @@ html, body {
 
     height: 75%;
     width: 38%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10%, 10%;
+    margin: 5%, 5%;
     padding: 5%;
     background-color:#9D9CAB;
     border-radius: 2%;
-    gap: 1%;
+    gap: 5%;
     
   }
 
-  .middlecontainer > div {
+  .middlecontainer > section > div {
 
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 33%;
+    width: 100%;
     background-color: #C7C15D;
+    
   }

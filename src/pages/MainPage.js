@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '../styles/styles.module.css';
 
+import Slider from '../widgets/Slider.tsx';
+
 const MainPageContent = () => {
 
     return (
@@ -14,6 +16,7 @@ const MainPageContent = () => {
                 <div> 
                     <h1> Hello! </h1>
                 </div>
+                <div> <Slider /> </div>
             </section>
             <section> Section 2 </section>
         </div>
