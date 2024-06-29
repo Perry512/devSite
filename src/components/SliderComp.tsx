@@ -58,7 +58,7 @@ const SliderComp = ({ children, setCounter }: { children: ReactNode, setCounter:
     })
 
     return (
-        <animated.div {...bind()} className={styles.item} style={{ background: bg }}>
+        <animated.div {...bind()} className={styles.item} style={{ background: bg }}> 
             <animated.div className={styles.av} style={{scale:avSize, justifySelf }} />
             <animated.div className={styles.fg} style={{ x, scale }}>
                 {children}

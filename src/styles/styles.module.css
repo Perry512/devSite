@@ -1,3 +1,11 @@
+/* 
+  Color pallet 
+  #f4f5f4 -> White
+  #9D9CAB -> Grey
+  #3D6567 -> Turquoise
+  #B66A5E -> Red
+  #C7C15D -> Yellow
+*/
 html, body {
   margin:0;
   padding: 0;
@@ -5,9 +13,7 @@ html, body {
   overflow-x: hidden;
   overflow-y: scroll;
   background: #9D9CAB;
-  scroll-snap-type: proximity;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y proximity;
+
 }
 
 .container {
@@ -107,7 +113,7 @@ html, body {
     padding: 5%;
     background-color:#9D9CAB;
     border-radius: 2%;
-    gap: 5%;
+    gap: 7%;
     
   }
 
@@ -117,6 +123,9 @@ html, body {
     align-items: center;
     height: 33%;
     width: 100%;
-    background-color: #C7C15D;
+    background-color: #f4f5f4;
+    border-radius: 2%;
+    box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.695), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
     
   }
+
