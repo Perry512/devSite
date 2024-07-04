@@ -8,8 +8,8 @@ const CityInput = ({ onCitySubmit }) => {
     const handleSubmit = (e) => {
 
         e.preventDefault();        
-        e = e.replace(/[^a-zA-Z ]/g, "");
-        onCitySubmit(city);
+        const sanitizedCity = city.replace(/[^a-zA-Z ]/g, "");
+        onCitySubmit(sanitizedCity);
 
     };
 
@@ -21,6 +21,7 @@ const CityInput = ({ onCitySubmit }) => {
                 onChange={(e) => setCity(e.target.value)}
                     placeholder="Enter City"
             />
+            <button type="submit"> Get Weather </button>
         </form>
     );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../styles/styles.module.css';
 
 import Slider from '../widgets/Slider.tsx';
+import Weather from '../widgets/Weather.tsx';
 
 const MainPageContent = () => {
 
@@ -13,8 +14,7 @@ const MainPageContent = () => {
                 <h1> Who am I?</h1>
                 <p> I am a computer science graduate who is delving down into the world of web development </p>
                 </div>
-                <div> 
-                    <h1> Hello! </h1>
+                <div> <Weather />
                 </div>
                 <div> <Slider /> </div>
             </section>
