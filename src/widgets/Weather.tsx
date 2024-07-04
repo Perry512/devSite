@@ -5,7 +5,7 @@ import CityInput from '../components/CityInput.tsx';
 const Weather = () => {
 
     const [city, setCity] = useState('');
-    const { weather, loading, error } = useWeather(city);
+    const { weather, loading, error, isError } = useWeather(city);
 
     const handleCitySubmit = (newCity) => {
 
@@ -21,8 +21,8 @@ const Weather = () => {
             </div>
             <h3> Weather Widget </h3>
             {loading && <div>Loading...</div>}
-            {error && <div style={{color:'red'}}>{error}</div>}
-            {weather && (
+            {isError && <div style={{color:'red'}}>{error}</div>}
+            {!isError && weather && (
                 <div>
                     <h4> Weather in {weather.city}:</h4>
                     <p> Temperature: {weather.temperature} degrees </p>

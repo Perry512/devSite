@@ -5,21 +5,26 @@ const useWeather = (city) => {
     const [weather, setWeather] = useState<{ city: string; temperature: number; condition: string } | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [isError, setIsError] = useState(false);
 
     useEffect(() => {
         const fetchWeather = async () => {
             setLoading(true);
 
             try {
-                const { lat, lon } = await getCoordinates(city);
+                const { lat, lon, cityStateCountry } = await getCoordinates(city);
                 const weatherData = await getWeather(lat, lon);
+
                 setWeather({
-                    city,
+                    city: cityStateCountry,
                     temperature: weatherData.temperature,
                     condition: weatherData.condition,
+                    
                 });
             } catch (error) {
+
                 setError(error.message);
+                setIsError(true);
 
             } finally {
 
@@ -29,14 +34,15 @@ const useWeather = (city) => {
         };
 
         if (city) {
-
+            
             fetchWeather();
+            setIsError(false);
 
         }
 
     },[city]);
 
-    return { weather, loading, error };
+    return { weather, loading, error, isError };
 
 };
 

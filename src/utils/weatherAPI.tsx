@@ -12,11 +12,17 @@ export const getCoordinates = async(city: string) => {
 
     }
 
+    const cityName = data[0].display_name;
+    const parts = cityName.split(',').map(part => part.trim());
+    const filteredParts = parts.filter((_, index) => index !== 1);
+    const cityStateCountry = filteredParts.join(', ');
+
     return {
 
         lat: data[0].lat,
         lon: data[0].lon,
-
+        cityStateCountry,
+        
     };
 
 };
@@ -30,6 +36,7 @@ export const getWeather = async(lat: number, lon: number) => {
 
     const weatherCode = data.hourly.weather_code[0];
     const condition = wmoCode[weatherCode];
+
 
     return {
 
