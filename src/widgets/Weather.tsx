@@ -4,7 +4,7 @@ import CityInput from '../components/CityInput.tsx';
 
 const Weather = () => {
 
-    const [city, setCity] = useState('');
+    const [city, setCity] = useState('Rochester');
     const { weather, loading, error, isError } = useWeather(city);
 
     const handleCitySubmit = (newCity) => {

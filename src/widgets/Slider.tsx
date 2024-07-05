@@ -9,7 +9,7 @@ export default function Slider() {
 
     return (
         <div className={styles.container}>
-            <h3> Widget Example </h3>
+            <h3> Slider Widget </h3>
             <SliderComp setCounter={setCounter}> 
                 <div className={styles.containerText}>
                     <span style={{color: "#B66A5E"}}>-</span> 
