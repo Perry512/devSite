@@ -6,7 +6,7 @@ import ToDoInput from "../components/ToDoInput.tsx";
 
 const ToDo = () => {
 
-    const { tasks, addTask } = useToDo();
+    const { tasks, addTask, removeTask } = useToDo();
     
     const handleTodoSubmit = (task) => {
 
@@ -15,6 +15,7 @@ const ToDo = () => {
             addTask(task);
 
         }
+
     };
 
     return (
@@ -22,7 +23,7 @@ const ToDo = () => {
         <div>
             <h3> To Do List </h3>
             <ToDoInput onToDoSubmit={handleTodoSubmit} />
-            <ToDoList tasks={tasks} />
+            <ToDoList tasks={tasks} removeTask={removeTask} />
         </div>
     )
 }

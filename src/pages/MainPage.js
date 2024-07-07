@@ -4,6 +4,7 @@ import styles from '../styles/styles.module.css';
 import Slider from '../widgets/Slider.tsx';
 import Weather from '../widgets/Weather.tsx';
 import ToDo from '../widgets/ToDo.tsx';
+import Pictures from '../widgets/Pictures.tsx';
 
 const MainPageContent = () => {
 
@@ -16,7 +17,7 @@ const MainPageContent = () => {
                 </div>
                 <div> <Slider /> </div>
             </section>
-            <section> Section 2 </section>
+            <section> <Pictures /> </section>
         </div>
     );
 

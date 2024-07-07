@@ -1,11 +1,15 @@
 import React from 'react';
 
-const ToDoList = ({ tasks }) => {
+const ToDoList = ({ tasks, removeTask }) => {
 
     return (
         <ul>
             {tasks.map((task, index) =>  (
-                <li key={index}>{task}</li>
+                <li key={index}>
+                    {task}
+                    <button onClick={() => removeTask(index)}> X </button>
+                </li>
+                
             ))}
         </ul>
     )
