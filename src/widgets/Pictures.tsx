@@ -11,7 +11,7 @@ const Pictures = () => {
       }));
 
     return (
-    <Carousel isAutoPlaying="true" hasSizeButton="false" hasIndexBoard="false" hasThumbnails='false' thumbnailWidth='0%' hasThumbnailsAtMax='false' images={images} style={{ height: 500, width: 800 } } />
+    <Carousel isAutoPlaying="true" hasSizeButton="false" hasIndexBoard="false" hasThumbnails='false' thumbnailWidth='0%' thumbnailHeight='0%' hasThumbnailsAtMax='false' images={images} style={{ height: 500, width: 800 } } />
     );
 };
 
