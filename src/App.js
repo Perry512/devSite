@@ -20,7 +20,7 @@ import FirstPage from "./pages/FirstPage.tsx";
 
 function App() {
   return (
-    <div style={{height: '100vh' }}>
+    <div>
       <FirstPage />
       <MainPage />
     </div>

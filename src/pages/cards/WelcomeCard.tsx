@@ -7,7 +7,7 @@ const WelcomeCardContent = () => {
 	return (
 		<div className={styles.cardcontent}>
 			<h2> Welcome to my website! </h2>
-			<p> This is still very much a work in progress, but more will be added day by day as my journey continues! </p>
+			<p> Thank you for visiting my personal development website! </p>
 		</div>
 	);
 }

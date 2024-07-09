@@ -10,11 +10,9 @@ const MainPageContent = () => {
 
     return (
         <div  className={styles.middlecontainer}>
-            {/* <body> This is the beginning of my resume site! </body> */}
             <section>
                 <div> <ToDo /> </div>
-                <div> <Weather />
-                </div>
+                <div> <Weather /></div>
                 <div> <Slider /> </div>
             </section>
             <section> <Pictures /> </section>

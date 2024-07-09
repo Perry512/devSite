@@ -5,8 +5,7 @@ const CardContent = () => {
  
 return (
     <div className={styles.cardcontent}>
-    <h2>Fourth Card </h2>
-    <p>This is the fourth cards text</p>
+    <h2>I hope you enjoy the rest of this websites content found below! </h2>
     </div>
     );
 

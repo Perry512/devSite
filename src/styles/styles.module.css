@@ -9,17 +9,19 @@
 html, body {
   margin:0;
   padding: 0;
-  height: 141.4%;
+  height: 200%;
   overflow-x: hidden;
   overflow-y: scroll;
   background: #9D9CAB;
+  display: flex;
+  flex-direction: column;
 
 }
 
 .container {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     justify-content: center;
 
   }
@@ -64,7 +66,7 @@ html, body {
   .deck > div h2 {
     font-size: 45px;
     padding-top: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 25px;
   }
 
   .cardcontent {
