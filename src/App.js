@@ -3,6 +3,7 @@
 import './App.css';
 import MainPage from "./pages/MainPage.js";
 import FirstPage from "./pages/FirstPage.tsx";
+import AboutMe from './pages/AboutMe.tsx';
 
 // function App() {
 //   return (
@@ -23,6 +24,7 @@ function App() {
     <div>
       <FirstPage />
       <MainPage />
+      <AboutMe />
     </div>
     
   );

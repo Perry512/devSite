@@ -9,7 +9,7 @@
 html, body {
   margin:0;
   padding: 0;
-  height: 200%;
+  height: 300%;
   overflow-x: hidden;
   overflow-y: scroll;
   background: #9D9CAB;
@@ -90,47 +90,127 @@ html, body {
   
 .middlecontainer {
     
-    height: 95%;
-    width:95%;
-    border-radius: 2%;
-    background-color: #f4f5f4;
-    box-shadow:rgba(50, 50, 73, 0.5);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1%;
+  height: 95%;
+  width:95%;
+  border-radius: 2%;
+  background-color: #f4f5f4;
+  box-shadow:rgba(50, 50, 73, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
 
-  }
+}
 
-  .middlecontainer > section {
+.middlecontainer > section {
 
-    height: 75%;
-    width: 38%;
+  height: 75%;
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%, 5%;
+  padding: 5%;
+  background-color:#9D9CAB;
+  border-radius: 2%;
+  gap: 7%;
+    
+}
+
+.middlecontainer > section > div {
+
+  justify-content: center;
+  align-items: center;
+  height: 33%;
+  width: 100%;
+  background-color: #f4f5f4;
+  border-radius: 2%;
+  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.695), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+  
+}
+
+.aboutMeContainer {
+
+  height: 100vh;
+  background-color:#C7C15D;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.aboutMeContainer > div {
+  background-color: #9D9CAB;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5%;
+  box-sizing: border-box;
+}
+
+.aboutMeContainer > div > .tallSection {
+
+  justify-self: center;
+  position: relative;
+  width: 85%;
+  height: 75%;
+  background-color: #3D6567;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5%;
+
+}
+
+.aboutMeContainer > div > .smallSection {
+
+  width: 90%;
+  height: 15%;
+  background-color: #B66A5E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.aboutMeContainer > div > .smallSection > h2 {
+/* I'm trying to center the text in this but it don't wanna right now */
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  margin: 0%;
+
+}
+
+.aboutMeContainer > div > .tallSection > .line {
+
+  width: 10px;
+  background-color: #9D9CAB;
+}
+
+.aboutMeContainer > div > .tallSection > .boldTextSection {
+
+    margin:3%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5%, 5%;
-    padding: 5%;
-    background-color:#9D9CAB;
-    border-radius: 2%;
-    gap: 7%;
-    
-  }
+    background-color: #3D6567;
+    max-width: fit-content;
+}
 
-  .middlecontainer > section > div {
+.aboutMeContainer > div > .tallSection > .innerText {
 
-    justify-content: center;
-    align-items: center;
-    height: 33%;
-    width: 100%;
-    background-color: #f4f5f4;
-    border-radius: 2%;
-    box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.695), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
-    
-  }
+  background-color:#f4f5f4;
+  font-size: large;
+  display: flex;
+  border-radius: 0 5% 5% 0;
+  width: 100%;
 
-.about-me-container {
-  height:
+}
+
+.aboutMeContainer > div > .smallSection > .innerText > p {
+
+  font-size: small;
+
 }
