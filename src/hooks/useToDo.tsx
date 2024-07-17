@@ -6,7 +6,7 @@ const useToDo = () => {
 
         const savedTasks = localStorage.getItem('tasks');
 
-        return savedTasks ? JSON.parse(savedTasks) : [];
+        return savedTasks ? JSON.parse(savedTasks) : ['Enter a task, click the \'X\' to remove a task',];
 
     });
 
