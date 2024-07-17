@@ -7,7 +7,13 @@ const CardContent = () => {
     return(
         <div className={styles.cardcontent}>
             <h2> What is this website for? </h2>
-            <p> While it probably looks goofy right now, it is in general meant to show off my ability in developing web technologies, like a free form portfolio </p>
+            <div className={styles.yellowHorLine}></div>
+            <br></br>
+            <br></br>
+            <p> This site is meant to show off my ability in developing web technologies, like a free form portfolio </p>
+            <br></br>
+            <br></br>
+            <div className={styles.yellowHorLine}></div>
         </div>
     );
 

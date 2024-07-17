@@ -17,8 +17,8 @@ import WelcomeCard from "./cards/WelcomeCard.tsx";
 
 const cardsHTML = [
   <TestCard />,
-  <WhatIsSite />,
   <IntroCard />,
+  <WhatIsSite />,
   <WelcomeCard />,
 ]
 

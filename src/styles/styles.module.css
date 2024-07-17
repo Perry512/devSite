@@ -26,19 +26,19 @@ html, body {
 
   }
 
-  .deck {
-    position: absolute;
-    width: 600px;
-    height: 300px;
-    will-change: transform;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    touch-action: none;
-    /*top: 25%;
-    transform: translateY(-50%)
-    */
-  }
+.deck {
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+  /*top: 25%;
+  transform: translateY(-50%)
+  */
+}
   
   .deck > div {
     
@@ -47,7 +47,7 @@ html, body {
     background-position: center center;
     width: 80vh;
     max-width: 600px;
-    height: 100vh;
+    height: 600vh;
     max-height: 600px;
     will-change: transform;
     border-radius: 10px;
@@ -63,18 +63,49 @@ html, body {
 
   }
 
-  .deck > div h2 {
-    font-size: 45px;
-    padding-top: 30px;
-    padding-bottom: 25px;
-  }
+.deck > div h2 {
+  font-size: 45px;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
 
-  .cardcontent {
+.outerCard {
 
-    margin-left: 15%;
-    margin-right: 15%;
+  padding: 1%;
+  height: 100%;
 
-  }
+}
+
+.middleCard {
+
+  /* background-color: #C7C15D; */
+  margin: 1%;
+  padding: .1%;
+
+}
+
+.innerCard {
+
+  background-color: #f4f5f4;
+
+}
+.cardcontent {
+
+  margin-left: 15%;
+  margin-right: 15%;
+
+}
+
+.yellowHorLine {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 1px;
+  width: 100%;
+  background-color: #C7C15D;
+
+}
 
   .middleouterbox {
 

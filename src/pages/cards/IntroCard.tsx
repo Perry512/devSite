@@ -7,6 +7,8 @@ const IntroCardContent = () => {
 
         <div className={styles.cardcontent}>
             <h2> Who am I? </h2>
+            <div className={styles.yellowHorLine}></div>
+            <br></br>
             <p> I am a Computer Science graduate with a passion for web design and fighting games </p>
         </div>
 
