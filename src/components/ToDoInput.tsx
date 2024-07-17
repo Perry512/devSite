@@ -19,7 +19,7 @@ const ToDoInput = ({ onToDoSubmit }) => {
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Enter ToDo"
+                    placeholder="Enter a task"
             />
             <button type="submit"> Enter </button>
         </form>

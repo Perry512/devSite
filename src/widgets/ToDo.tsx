@@ -25,8 +25,8 @@ const ToDo = () => {
         <div className={styles.middleWidget}>
             <div className={styles.todoDiv}> 
                 <div className={styles.todoInput}>
-                <h3> To Do List </h3>
-                <ToDoInput onToDoSubmit={handleTodoSubmit} />
+                    <h3> To Do List </h3>
+                    <ToDoInput onToDoSubmit={handleTodoSubmit} />
                 </div>
                 <div className={styles.todoTasksDisplay}>
                     <ToDoList tasks={tasks} removeTask={removeTask} />
