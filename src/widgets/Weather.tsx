@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import useWeather from '../hooks/useWeather.tsx';
 import CityInput from '../components/CityInput.tsx';
 
+import styles from '../styles/styles.module.css';
+
 const Weather = () => {
 
     const [city, setCity] = useState('Rochester');
@@ -15,7 +17,7 @@ const Weather = () => {
 
     return (
         
-        <div>
+        <div className={styles.middleWidget}>
             <div>
                 <CityInput onCitySubmit={handleCitySubmit}/>
             </div>

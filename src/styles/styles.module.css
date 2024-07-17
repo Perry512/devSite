@@ -18,6 +18,8 @@ html, body {
 
 }
 
+/****************Card page ********************/
+
 .container {
     display: flex;
     align-items: center;
@@ -40,28 +42,28 @@ html, body {
   */
 }
   
-  .deck > div {
-    
-    background-size: auto 85%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 80vh;
-    max-width: 600px;
-    height: 600vh;
-    max-height: 600px;
-    will-change: transform;
-    border-radius: 10px;
-    box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
-    /* from: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    text-align: center;
+.deck > div {
+  
+  background-size: auto 85%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 80vh;
+  max-width: 600px;
+  height: 600vh;
+  max-height: 600px;
+  will-change: transform;
+  border-radius: 10px;
+  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+  /* from: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  text-align: center;
 
-  }
+}
 
 .deck > div h2 {
   font-size: 45px;
@@ -107,17 +109,18 @@ html, body {
 
 }
 
-  .middleouterbox {
+/********************** Middle page ***********************/
+.middleouterbox {
 
-    position: center;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    background-color:  #3D6567;
-    align-items: center;
-    justify-content: center;
-    
-  }
+  position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color:  #3D6567;
+  align-items: center;
+  justify-content: center;
+  
+}
   
 .middlecontainer {
     
@@ -162,6 +165,41 @@ html, body {
   
 }
 
+.middleWidget {
+
+  height: 33%;
+  padding: 1%;
+
+}
+
+.todoDiv {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.todoInput {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.todoTasksDisplay {
+
+  display: flex;
+  flex-direction: column;
+  height: 190px;
+  overflow-y: auto;
+  padding: 1%;
+  
+}
+
+/************************* About me page **********************************/
 .aboutMeContainer {
 
   height: 100vh;

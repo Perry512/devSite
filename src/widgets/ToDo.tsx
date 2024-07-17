@@ -4,6 +4,8 @@ import ToDoList from "../components/ToDoList.tsx";
 import useToDo from "../hooks/useToDo.tsx";
 import ToDoInput from "../components/ToDoInput.tsx";
 
+import styles from "../styles/styles.module.css";
+
 const ToDo = () => {
 
     const { tasks, addTask, removeTask } = useToDo();
@@ -20,10 +22,16 @@ const ToDo = () => {
 
     return (
 
-        <div>
-            <h3> To Do List </h3>
-            <ToDoInput onToDoSubmit={handleTodoSubmit} />
-            <ToDoList tasks={tasks} removeTask={removeTask} />
+        <div className={styles.middleWidget}>
+            <div className={styles.todoDiv}> 
+                <div className={styles.todoInput}>
+                <h3> To Do List </h3>
+                <ToDoInput onToDoSubmit={handleTodoSubmit} />
+                </div>
+                <div className={styles.todoTasksDisplay}>
+                    <ToDoList tasks={tasks} removeTask={removeTask} />
+                </div>
+            </div>
         </div>
     )
 }
