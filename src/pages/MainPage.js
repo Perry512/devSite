@@ -9,13 +9,13 @@ import Pictures from '../widgets/Pictures.tsx';
 const MainPageContent = () => {
 
     return (
-        <div  className={styles.middlecontainer}>
+        <div className={styles.middlecontainer}>
             <section>
                 <div> <ToDo /> </div>
                 <div> <Weather /></div>
                 <div> <Slider /> </div>
             </section>
-            <section> <Pictures /> </section>
+            <div className={styles.outerPhoto}> <Pictures /> </div>
         </div>
     );
 
