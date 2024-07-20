@@ -11,7 +11,7 @@
 html, body {
   margin:0;
   padding: 0;
-  height: 300%;
+  height: 330%;
   overflow-x: hidden;
   overflow-y: scroll;
   background: #9D9CAB;
@@ -219,7 +219,7 @@ html, body {
   height: auto;
   width: 100%;
   display: flex;
-  flex: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 2%;
@@ -229,85 +229,91 @@ html, body {
 
 /************************* About me page **********************************/
 .aboutMeContainer {
-
   height: 100vh;
-  background-color:#C7C15D;
+  background-color: #9D9CAB; /* Set the main background to white */
   display: flex;
   justify-content: space-around;
-
 }
 
 .aboutMeContainer > div {
-  background-color: #9D9CAB;
+  background-color: #3D6567; /* Use Turquoise for the main div background */
   width: 40%;
+  margin: 2%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 5%;
   box-sizing: border-box;
+  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.695), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
 }
 
 .aboutMeContainer > div > .tallSection {
-
   justify-self: center;
   position: relative;
   width: 85%;
   height: 75%;
-  background-color: #3D6567;
+  background-color: #C7C15D; /* Use Yellow for the tall section background */
   display: flex;
   flex-direction: row;
   border-radius: 5%;
-
 }
 
 .aboutMeContainer > div > .smallSection {
-
   width: 90%;
   height: 15%;
-  background-color: #B66A5E;
+  background-color: #B66A5E; /* Use Red for the small section background */
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .aboutMeContainer > div > .smallSection > h2 {
-/* I'm trying to center the text in this but it don't wanna right now */
   display: flex;
   justify-content: center;
   top: 50%;
   margin: 0%;
-
 }
 
 .aboutMeContainer > div > .tallSection > .line {
-
   width: 10px;
-  background-color: #9D9CAB;
+  background-color: #9D9CAB; /* Use Grey for the line */
 }
 
 .aboutMeContainer > div > .tallSection > .boldTextSection {
-
-    margin:3%;
-    display: flex;
-    flex-direction: column;
-    background-color: #3D6567;
-    max-width: fit-content;
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  background-color: #C7C15D; /* Use Grey for the bold text section */
+  max-width: fit-content;
 }
 
 .aboutMeContainer > div > .tallSection > .innerText {
-
-  background-color:#f4f5f4;
+  background-color: #f4f5f4; /* Use White for the inner text background */
   font-size: large;
   display: flex;
   border-radius: 0 5% 5% 0;
   width: 100%;
-
 }
 
 .aboutMeContainer > div > .smallSection > .innerText > p {
-
   font-size: small;
+}
+
+.header, .footer {
+
+  background-color: #2c2c2c;
+  color:#C7C15D;
+  justify-content: center;
+
+}
+
+.headerSections, .footerSections{
+
+  display: flex;
+  flex-direction: row;
+  height: 15vh;
+  align-items: center;
+  padding:0% 3%;
 
 }
