@@ -12,13 +12,19 @@ const AboutMeContent= () => {
                     <div className={styles.line}> </div>
                     <div className={styles.innerText}>
                         <div>
-                        <p><br></br>
-                            <p><b>Timeline:</b></p>
-                            <p>2017: Athena High <br></br></p>
-                            <p>2019 - 2022: Monroe Community College <br></br></p>
-                            <p>Awarded: A.S. Computer Science <br></br></p>
-                            <p>2022 - 2024: SUNY Brockport <br></br></p>
-                            <p>Awarded: B.S. Computer Science <br></br></p>
+                        <p> 
+                            <div className={styles.in}>
+                                <p><h3>Timeline:</h3></p>
+                                <div className={styles.yellowHorLine}></div>
+                                <p><b>2017</b> Athena High <br></br></p>
+                                <div className={styles.yellowHorLine}></div>
+                                <p><b>2019 - 2022:</b> Monroe Community College <br></br></p>
+                                <p>Awarded: A.S. Computer Science <br></br></p>
+                                <div className={styles.yellowHorLine}></div>
+                                <p><b>2022 - 2024:</b> SUNY Brockport <br></br></p>
+                                <p>Awarded: B.S. Computer Science <br></br></p>
+                                <div className={styles.yellowHorLine}></div>
+                            </div>
                         </p>   
                         </div>
                     </div>  {/* end inner */}
@@ -30,9 +36,13 @@ const AboutMeContent= () => {
                     <div className={styles.line}></div>
                     <div className={styles.innerText}>
                         <p><br></br>
-                            <p> In my free time, I enjoy keeping my mind busy with playing fighting games, including going to local tournaments to compete </p><br></br>
-                            <p> To keep me physically active, I enjoy rock climbing at my local climbing gym, it's a great way to keep myself healthy while also solving physical puzzles </p> <br></br>
-                            <p> I aspire to continue on my education in either the computer science or education field and eventually become a teacher myself, a passion I realized during my time working with Code Ninjas.</p>
+                            <div className={styles.in}>
+                                <p> In my free time, I enjoy keeping my mind busy with playing fighting games, including going to local tournaments to compete </p><br></br>
+                                <div className={styles.yellowHorLine}></div>
+                                <p> To keep me physically active, I enjoy rock climbing at my local climbing gym, it's a great way to keep myself healthy while also solving physical puzzles </p> <br></br>
+                                <div className={styles.yellowHorLine}></div>
+                                <p> I aspire to continue on my education in either the computer science or education field and eventually become a teacher myself, a passion I realized during my time working with Code Ninjas.</p>
+                            </div>
                         </p>
                     </div>
                 </div> {/* end tall */}

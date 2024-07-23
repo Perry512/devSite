@@ -262,10 +262,11 @@ html, body {
 .aboutMeContainer > div > .smallSection {
   width: 90%;
   height: 15%;
-  background-color: #B66A5E; /* Use Red for the small section background */
+  background-color: #B66A5E;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 2%;
 }
 
 .aboutMeContainer > div > .smallSection > h2 {
@@ -277,19 +278,19 @@ html, body {
 
 .aboutMeContainer > div > .tallSection > .line {
   width: 10px;
-  background-color: #9D9CAB; /* Use Grey for the line */
+  background-color: #9D9CAB;
 }
 
 .aboutMeContainer > div > .tallSection > .boldTextSection {
   margin: 3%;
   display: flex;
   flex-direction: column;
-  background-color: #C7C15D; /* Use Grey for the bold text section */
+  background-color: #C7C15D; 
   max-width: fit-content;
 }
 
 .aboutMeContainer > div > .tallSection > .innerText {
-  background-color: #f4f5f4; /* Use White for the inner text background */
+  background-color: #f4f5f4;
   font-size: large;
   display: flex;
   border-radius: 0 5% 5% 0;
@@ -298,6 +299,15 @@ html, body {
 
 .aboutMeContainer > div > .smallSection > .innerText > p {
   font-size: small;
+}
+
+.in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15%;
+
 }
 
 .header, .footer {
