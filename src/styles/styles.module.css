@@ -227,6 +227,28 @@ html, body {
 
 }
 
+.weatherDiv {
+
+  display: flex;
+  justify-content: space-around;
+  overflow-y: hidden;
+
+}
+
+.weatherImageDiv {
+
+  background-color: #9D9CAB;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 10%;
+  height: 10%;
+  border-radius: 20%;
+  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.695), 0 10px 10px -10px rgba(50, 50, 73, 0.3);;
+
+}
+
+
 /************************* About me page **********************************/
 .aboutMeContainer {
   height: 100vh;

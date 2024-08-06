@@ -1,8 +1,16 @@
 import { useState, useEffect } from 'react';
- import { getCoordinates, getWeather } from '../utils/weatherAPI.tsx';
+import { getCoordinates, getWeather } from '../utils/weatherAPI.tsx';
 
-const useWeather = (city) => {
-    const [weather, setWeather] = useState<{ city: string; temperature: number; condition: string } | null>(null);
+interface WeatherData {
+    city: string;
+    temperature: number;
+    condition: string;
+    conditionImageURL: string;
+
+}
+
+const useWeather = (city: string) => {
+    const [weather, setWeather] = useState<WeatherData | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [isError, setIsError] = useState(false);
@@ -16,9 +24,11 @@ const useWeather = (city) => {
                 const weatherData = await getWeather(lat, lon);
 
                 setWeather({
+                    
                     city: cityStateCountry,
                     temperature: weatherData.temperature,
                     condition: weatherData.condition,
+                    conditionImageURL: weatherData.conditionImageURL,
                     
                 });
             } catch (error) {

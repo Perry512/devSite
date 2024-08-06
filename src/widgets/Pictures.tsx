@@ -23,14 +23,14 @@ const Pictures = () => {
       {/* <h2>{images[currentIndex].title}</h2> */}
       <Carousel 
         // className={styles.photoContainer} 
-        hasSizeButton="false" 
-        hasIndexBoard="false" 
+        hasSizeButton='false' 
+        hasIndexBoard='false' 
         hasThumbnails='false' 
         thumbnailWidth='0%' 
         thumbnailHeight='0%' 
         hasThumbnailsAtMax='false' 
-        isAutoPlaying="true" 
-        hasCaptions="true" 
+        isAutoPlaying='true'
+        hasCaptions='true' 
         images={images} 
         style={{ height: "50%", width: "100%" }}/>
       {/* <p>{images[currentIndex].description}</p> */}

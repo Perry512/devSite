@@ -25,10 +25,15 @@ const Weather = () => {
             {loading && <div>Loading...</div>}
             {isError && <div style={{color:'red'}}>{error}</div>}
             {!isError && weather && (
-                <div>
+                <div className={styles.weatherDiv}>
+                    <div>
                     <h4> Weather in {weather.city}:</h4>
                     <p> Temperature: {weather.temperature} degrees </p>
                     <p> Condition: {weather.condition}</p>
+                    </div>
+                    <div className={styles.weatherImageDiv}> 
+                        <img src={weather.conditionImageURL} alt={weather.condition}/>    
+                    </div>
                 </div>
             )}
         </div>

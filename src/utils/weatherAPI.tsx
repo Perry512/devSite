@@ -35,13 +35,24 @@ export const getWeather = async(lat: number, lon: number) => {
     console.log('city API Response: ', data);
 
     const weatherCode = data.hourly.weather_code[0];
-    const condition = wmoCode[weatherCode];
+    const conditionDirty = wmoCode[weatherCode];
+
+    // console.log(conditionDirty);
+
+    const condition = conditionDirty[0];
+    const conditionImageCode = conditionDirty[1];
+
+    const conditionImageResponse = await fetch(`http://openweathermap.org/img/w/${encodeURI(conditionImageCode.toString())}.png`);
+    const conditionImageBlob = await conditionImageResponse.blob();
+    const conditionImageURL = URL.createObjectURL(conditionImageBlob);
+    // console.log(conditionImageResponse);
 
 
     return {
 
         temperature: data.hourly.temperature_2m[0],
         condition: condition,
+        conditionImageURL: conditionImageURL,
 
     }
 }
