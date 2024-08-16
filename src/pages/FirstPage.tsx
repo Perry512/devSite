@@ -31,7 +31,7 @@ const to = (i: number) => ({
 
 })
 
-console.log(cardsHTML);
+// console.log(cardsHTML);
 
 const from = (_i: number) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 // This is being used down there in the view, it interpolates rotation and scale into a css transform

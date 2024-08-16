@@ -1,6 +1,8 @@
+import climbing from './climbing.png';
+
 const pictures = [
     {
-      src: require('./climbing.png'),
+      src: climbing,
       title: 'Rock climbing /"Career"/',
       description: 'Enjoying a day of rock climbing.'
     },
