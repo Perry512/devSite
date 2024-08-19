@@ -42,7 +42,7 @@ export const getWeather = async(lat: number, lon: number) => {
     const condition = conditionDirty[0];
     const conditionImageCode = conditionDirty[1];
 
-    const conditionImageResponse = await fetch(`http://openweathermap.org/img/w/${encodeURI(conditionImageCode.toString())}.png`);
+    const conditionImageResponse = await fetch(`https://openweathermap.org/img/w/${encodeURI(conditionImageCode.toString())}.png`);
     const conditionImageBlob = await conditionImageResponse.blob();
     const conditionImageURL = URL.createObjectURL(conditionImageBlob);
     // console.log(conditionImageResponse);
