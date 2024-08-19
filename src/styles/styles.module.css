@@ -340,6 +340,13 @@ html, body {
 
 }
 
+.footer {
+
+  position: absolute;
+  width: 100%;
+  padding:1em;
+}
+
 .headerSections, .footerSections{
 
   display: flex;
@@ -347,5 +354,22 @@ html, body {
   height: 15vh;
   align-items: center;
   padding:0% 3%;
+
+}
+
+.headerTitle {
+
+  color:#C7C15D;
+  text-decoration: none;
+}
+
+.headerLinks {
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:10%;
+  justify-content:first baseline;
 
 }

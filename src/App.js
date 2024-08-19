@@ -1,4 +1,4 @@
-//import {Routes, Route, BrowserRouter} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import './App.css';
 import MainPage from './pages/MainPage.js';
@@ -7,29 +7,30 @@ import AboutMe from './pages/AboutMe.tsx';
 import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
 
-// function App() {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-        
-//         <Route path='/' element={<Test />} />
-//         <Route path='/' element={<MainPage />} />
-        
-//       </Routes>
-//     </BrowserRouter>
-    
-//   );
-// }
+// import StoreFrontPage from './pages/StoreFrontPage.js'
+import ResumePage from './pages/ResumePage.js';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <FirstPage />
-      <MainPage />
-      <AboutMe />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={
+        <div>
+          {/* <nav>
+                <Link to="/store">Go to Store</Link>
+          </nav> */}
+          <Header />
+          <FirstPage />
+          <MainPage />
+          <AboutMe />
+          <Footer />
+        </div>
+        }
+      />
+        {/* <Route path="/store" element={<StoreFrontPage/>}/> */}
+        <Route path="/resume" element={<ResumePage/>}/>
+      </Routes>
+    </Router>
     
   );
 }
