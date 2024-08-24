@@ -11,6 +11,7 @@ const HeaderComponent = () => {
                 <div className={styles.headerLinks}>
                 <Link to="/" className={styles.headerTitle}><h1> TylerNicholas.dev </h1></Link>
                 <Link to="/resume"><p className={styles.headerTitle}>View my Resume</p></Link>
+                <Link to="/nasus"><p className={styles.headerTitle}>Dumb bit</p></Link>
                 </div>
             </div>
         </header>
