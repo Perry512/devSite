@@ -33,7 +33,6 @@ function App() {
         <Route path="/nasus" element={<Nasus />}/>
       </Routes>
     </Router>
-    
   );
 }
 
