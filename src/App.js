@@ -9,6 +9,7 @@ import Footer from './components/Footer.tsx';
 
 // import StoreFrontPage from './pages/StoreFrontPage.js'
 import ResumePage from './pages/ResumePage.js';
+import Nasus from "./pages/Nasus.js";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       />
         {/* <Route path="/store" element={<StoreFrontPage/>}/> */}
         <Route path="/resume" element={<ResumePage/>}/>
+        <Route path="/nasus" element={<Nasus />}/>
       </Routes>
     </Router>
     
