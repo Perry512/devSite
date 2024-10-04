@@ -9,28 +9,32 @@ import Footer from './components/Footer.tsx';
 
 // import StoreFrontPage from './pages/StoreFrontPage.js'
 import ResumePage from './pages/ResumePage.js';
-import Nasus from "./pages/Nasus.js";
+import LandingPage from './pages/LandingPage.js';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={
-        <div>
-          {/* <nav>
-                <Link to="/store">Go to Store</Link>
-          </nav> */}
-          <Header />
-          <FirstPage />
-          <MainPage />
-          <AboutMe />
-          <Footer />
-        </div>
-        }
-      />
+          <div>
+            {/* <nav>
+                  <Link to="/store">Go to Store</Link>
+            </nav> */}
+            <Header />
+            <LandingPage />
+            <MainPage />
+            <AboutMe />
+            <Footer />
+          </div>
+        }/>
         {/* <Route path="/store" element={<StoreFrontPage/>}/> */}
-        <Route path="/resume" element={<ResumePage/>}/>
-        <Route path="/nasus" element={<Nasus />}/>
+        <Route path="/resume" element={
+          <div>
+            <Header />
+            <ResumePage/>
+            <Footer />
+          </div>
+        }/>
       </Routes>
     </Router>
   );

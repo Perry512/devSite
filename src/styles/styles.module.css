@@ -17,6 +17,7 @@ html, body {
   background: #9D9CAB;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 
 }
 
@@ -372,4 +373,106 @@ html, body {
   gap:10%;
   justify-content:first baseline;
 
+}
+
+/* ************************** New landing page ************************* */
+
+.background {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0D1821; /* Soft neutral beige */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../pictures/pexels-anniroenkae-2832382.jpg");
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoContainer {
+  background-color: #334966; /* Light greyish mint */
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.infoTop {
+  background-color: #ABA9BF; /* Muted slate blue */
+  width: 95%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #ffffff; /* White text */
+}
+
+.infoBottom {
+  background-color: #ABA9BF;
+  width: 90%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  color: #ffffff; /* White text */
+}
+
+.navButtonBase {
+  background-color: #0D1821; /* Muted slate blue */
+  width: 28%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navButton {
+  background-color: #0D1821;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 40%;
+  border-radius: 5%;
+  transition: background-color 0.3s ease;
+
+}
+
+.navButtonBase:hover .navButton {
+  background-color: #1a2739; /* Soft desaturated green */
+}
+
+.infoWelcomeTop, .infoWelcomeBottom {
+  /* background-color: #f0f0f5; /* Soft neutral beige */
+  width: 95%;
+  height: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #2c3e50; /* Dark charcoal grey for readability */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.infoWelcomeTop {
+  font-size: 400%;
+}
+
+.infoWelcomeBottom {
+  /* background-color: #dfe6e9; /* Light greyish mint */
+  font-size: 300%;
 }

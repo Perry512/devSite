@@ -47,7 +47,7 @@ const AboutMeContent= () => {
                     </div>
                 </div> {/* end tall */}
                 <div className={styles.smallSection}>
-                    <div className={styles.innerText}>
+                    <div className={styles.innerText} id="contact">
                         <h3> Where to reach me: </h3>
                         <p> eMail: <a href="mailto: tnicholas512@gmail.com"> tnicholas512@gmail.com</a></p>
                         <p> LinkedIn: <a href="https://www.linkedin.com/in/tyler-nicholas-1300a8173/">Tyler Nicholas </a></p>
@@ -62,7 +62,7 @@ const AboutMeContent= () => {
 export default function AboutMe() {
 
     return (
-        <div>
+        <div id="about">
             <AboutMeContent/>
         </div>
     );

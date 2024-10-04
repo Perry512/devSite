@@ -24,7 +24,7 @@ const MainPageContent = () => {
 export default function MainPage() {
 
     return (
-        <div className={styles.middleouterbox}>
+        <div className={styles.middleouterbox} id="projects">
             <MainPageContent />
         </div>
     )
