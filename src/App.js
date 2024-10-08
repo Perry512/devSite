@@ -2,7 +2,6 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import './App.css';
 import MainPage from './pages/MainPage.js';
-import FirstPage from './pages/FirstPage.tsx';
 import AboutMe from './pages/AboutMe.tsx';
 import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
@@ -22,8 +21,8 @@ function App() {
             </nav> */}
             <Header />
             <LandingPage />
-            <MainPage />
             <AboutMe />
+            <MainPage />
             <Footer />
           </div>
         }/>

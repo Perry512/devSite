@@ -119,7 +119,7 @@ html, body {
   height: 100vh;
   width: 100%;
   display: flex;
-  background-color:  #3D6567;
+  background-color:  #0D1821;
   align-items: center;
   justify-content: center;
   
@@ -130,7 +130,7 @@ html, body {
   height: 95%;
   width:95%;
   border-radius: 2%;
-  background-color: #f4f5f4;
+  background-color: #334966;
   box-shadow:rgba(50, 50, 73, 0.5);
   display: flex;
   flex-direction: row;
@@ -150,7 +150,7 @@ html, body {
   align-items: center;
   margin: 5%, 5%;
   padding: 5%;
-  background-color:#9D9CAB;
+  background-color:#ABA9BF;
   border-radius: 2%;
   gap: 7%;
     
@@ -162,7 +162,7 @@ html, body {
   align-items: center;
   height: 33%;
   width: 100%;
-  background-color: #f4f5f4;
+  background-color: #BEB7DF;
   border-radius: 2%;
   box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.695), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
   
@@ -253,13 +253,13 @@ html, body {
 /************************* About me page **********************************/
 .aboutMeContainer {
   height: 100vh;
-  background-color: #9D9CAB; /* Set the main background to white */
+  background-color: #0D1821;
   display: flex;
   justify-content: space-around;
 }
 
 .aboutMeContainer > div {
-  background-color: #3D6567; /* Use Turquoise for the main div background */
+  background-color: #334966; /* Use Turquoise for the main div background */
   width: 40%;
   margin: 2%;
   display: flex;
@@ -285,7 +285,7 @@ html, body {
 .aboutMeContainer > div > .smallSection {
   width: 90%;
   height: 15%;
-  background-color: #B66A5E;
+  background-color: #BEB7DF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -318,6 +318,7 @@ html, body {
   display: flex;
   border-radius: 0 5% 5% 0;
   width: 100%;
+  overflow: scroll;
 }
 
 .aboutMeContainer > div > .smallSection > .innerText > p {
@@ -468,11 +469,23 @@ html, body {
   padding: 10px;
 }
 
-.infoWelcomeTop {
-  font-size: 400%;
+@media (max-width: 1500px) {
+  .infoWelcomeTop {
+    font-size: 6vw; /* Scales based on viewport width */
+  }
+  .infoWelcomeBottom {
+    font-size: 4.5vw;
+    display: flex;
+    }
 }
 
-.infoWelcomeBottom {
-  /* background-color: #dfe6e9; /* Light greyish mint */
-  font-size: 300%;
+@media (min-width: 1500px) {
+  .infoWelcomeTop {
+    font-size: 4rem; /* Fixed size based on root font size */
+  }
+  .infoWelcomeBottom {
+    font-size: 3rem;
+    text-align: center;
+  }
 }
+

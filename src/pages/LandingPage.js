@@ -17,13 +17,13 @@ const FirstPageContent = () => {
                         </div>
                     </div>
                     <div className={styles.infoBottom}>
-                        <div className={styles.navButtonBase}>
+                        <div className={styles.navButtonBase} href="#about">
                             <a className={styles.navButton} href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>About Me</a>
                         </div>
-                        <div className={styles.navButtonBase}>
+                        <div className={styles.navButtonBase} href="#projects">
                             <a className={styles.navButton} href="#projects" style={{ textDecoration: 'none', color: 'inherit' }}>Projects</a>
                         </div>
-                        <div className={styles.navButtonBase}>
+                        <div className={styles.navButtonBase} href="#contact">
                             <a className={styles.navButton} href="#contact" style={{ textDecoration: 'none', color: 'inherit' }}>Contact</a>
                         </div>
                     </div>
